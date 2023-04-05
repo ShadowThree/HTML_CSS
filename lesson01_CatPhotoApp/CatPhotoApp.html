@@ -1,0 +1,89 @@
+<!DOCTYPE html> <!-- 指定文档类型 -->
+<html lang="en"> <!-- 语言 -->
+
+<head>
+  <!-- title用于设置当浏览器打开本文档时，在TAB上显示的名字，如果没有设置将显示文件名 -->
+  <title>CatPhotoApp</title>
+</head>
+
+<body>
+  <main>
+    <h1>CatPhotoApp</h1>
+    <!-- 标题1之后的标题都需要用section封起来，表示一个新的部分开始了 -->
+    <section>
+      <h2>Cat Photos</h2>
+      <!-- p表示添加段落; a表示anchor，即添加链接 -->
+      <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p>
+      <!-- 为一个图片添加链接; href属性指定需要连接到的网址； target属性指定点击后是在当前标签页还是在新的标签页打开网页 -->
+      <a href="https://freecatphotoapp.com" target="_blank">
+        <!-- 添加图片元素； src指定图片链接； alt属性只有在图片显示失效时才起作用，当图片显示失败，就会在该显示图片的地方显示alt指定的内容,
+                           title属性指定当光标悬停在图片上方时显示的内容 -->
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+          alt="A cute orange cat lying on its back." title="title attribete show this mesage.">
+      </a>
+    </section>
+    <section>
+      <h2>Cat Lists</h2>
+      <h3>Things cats love:</h3>
+      <!-- 添加无序列表：unordered list -->
+      <ul>
+        <!-- 添加列表元素：list item -->
+        <li>cat nip</li>
+        <li>laser pointers</li>
+        <li>lasagna</li>
+      </ul>
+      <!-- figure元素作用？ -->
+      <figure>
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+          alt="A slice of lasagna on a plate.">
+        <!-- figcaption元素将在figure元素中的图片下显示figcaption中指定的文本; caption有图片说明的意思 -->
+        <!-- em表示强调； emphasize的缩写，一般是斜体显示 -->
+        <figcaption>Cats <em>love</em> lasagna.</figcaption>
+      </figure>
+      <h3>Top 3 thins cats hate:</h3>
+      <!-- 添加有序列表：ordered list -->
+      <ol>
+        <li>flea treatment</li>
+        <li>thunder</li>
+        <li>other cats</li>
+      </ol>
+      <figure>
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+          alt="Five cats looking around a field.">
+        <!-- strong属性也是起强调作用，一般粗体显示 -->
+        <figcaption>Cat <strong>hate</strong> other cats.</figcaption>
+      </figure>
+    </section>
+    <section>
+      <h2>Cat Form</h2>
+      <!-- 添加表格元素，action属性指定了表格中收集到的信息需要发送到哪里 -->
+      <form action="https://freecatphotoapp.com/submit-cat-photo">
+        <fieldset>
+          <legend>Is your cat indoor or outdoor?</legend>
+          <label><input type="radio" id="indoor" name="indoor-outdoor" value="indoor" checked> indoor</label>
+          <label><input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+        </fieldset>
+        <fieldset>
+          <legend>What's your cat's personality?</legend>
+          <input id="loving" type="checkbox" name="personality" value="loving" checked>
+          <label for="loving">Loving</label>
+          <input id="lazy" type="checkbox" name="personality" value="lazy">
+          <label for="lazy">Lazy</label>
+          <input id="energetic" type="checkbox" name="personality" value="energetic">
+          <label for="energetic">Energetic</label>
+        </fieldset>
+        <!-- input元素用于指定你想要收集信息的方式，type指定信息的种类, name用于指定访问这个信息的名字,
+                  placeholder用于提示用户需要输入什么内容, required表示这是必填项，不需要指定值 -->
+        <input type="text" name="catphotourl" placeholder="cat phote URL" required>
+        <!-- button元素，点击后的默认行为是将本表单的信息提交到form的action指定的网址。button将默认显示在input后面，因为他们都是行内元素。
+                button的type属性指定了这是一个提交按钮 -->
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>No copyright - <a href="https://www.freecodecamp.org">freecodecamp.org</a></p>
+  </footer>
+</body>
+
+</html>
