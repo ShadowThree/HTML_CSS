@@ -1,0 +1,22 @@
+h1 {
+  text-align: center;
+}
+
+.marker {
+  /* 第一个值设置margin-top和margin-bottom; 第二个值设置left和right */
+  margin: 10px auto;
+  height: 25px;
+  width: 200px;
+}
+
+.one {
+  background-color: red;
+}
+
+.two {
+  background-color: green;
+}
+
+.three {
+  background-color: blue;
+}
